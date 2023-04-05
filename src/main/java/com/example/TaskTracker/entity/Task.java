@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Entity
 @Table(name="task")
 @EntityListeners(AuditingEntityListener.class)
-@Audited
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

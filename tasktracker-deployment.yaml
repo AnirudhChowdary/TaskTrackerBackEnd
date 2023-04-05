@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasktracker-demo-deployment
+  labels:
+    app: tasktracker-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasktracker-demo
+  template:
+    metadata:
+      labels:
+        app: tasktracker-demo
+    spec:
+      containers:
+        - name: tasktracker-demo
+          image: anirudhchowdary123/tasktrackerbackend
+          ports:
+            - containerPort: 80
